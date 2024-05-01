@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grpc-demo-client
+  labels:
+    app: grpc-demo-client
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: grpc-demo-client
+  template:
+    metadata:
+      labels:
+        app: grpc-demo-client
+    spec:
+      containers:
+        - name: grpc-demo-client
+          image: grpc-demo:latest
+          command: ["c"]
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 50051
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: grpc-demo-client
+  labels:
+    app: grpc-demo-client
+spec:
+  type: ClusterIP
+  selector:
+    app: grpc-demo-client
+  ports:
+    - protocol: TCP
+      port: 50051
+      targetPort: 50051
