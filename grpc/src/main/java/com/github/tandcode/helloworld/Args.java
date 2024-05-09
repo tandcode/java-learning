@@ -11,7 +11,7 @@ public class Args {
 
   @SneakyThrows
   public int port() {
-    return commandLine.getParsedOptionValue('p', 50051);
+    return Integer.parseInt(commandLine.getParsedOptionValue('p', "50051"));
   }
 
   @SneakyThrows
