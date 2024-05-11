@@ -11,6 +11,7 @@
     <modules>
         <module>grpc</module>
         <module>openapi</module>
+        <module>graphql</module>
     </modules>
 
     <properties>
