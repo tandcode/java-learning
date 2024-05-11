@@ -1,4 +1,4 @@
-package com.github.tandcode.helloworld;
+package com.github.tandcode.grpc.helloworld;
 
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;

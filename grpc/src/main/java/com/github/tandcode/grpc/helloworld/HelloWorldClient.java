@@ -1,4 +1,4 @@
-package com.github.tandcode.helloworld;
+package com.github.tandcode.grpc.helloworld;
 
 import com.github.tandcode.HelloReply;
 import com.github.tandcode.HelloRequest;
@@ -9,7 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.TimeUnit;
 
-import static com.github.tandcode.helloworld.Args.parseArguments;
+import static com.github.tandcode.grpc.helloworld.Args.parseArguments;
 
 @Slf4j
 public class HelloWorldClient {
