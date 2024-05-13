@@ -12,6 +12,7 @@
         <module>grpc</module>
         <module>openapi</module>
         <module>graphql</module>
+        <module>tls</module>
     </modules>
 
     <properties>
